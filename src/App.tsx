@@ -154,14 +154,14 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafd] text-[#202124] font-sans antialiased relative">
+    <div className="min-h-screen bg-[#F0F8F1] text-[#002776] font-sans antialiased relative">
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'radial-gradient(circle at top left, rgba(66, 133, 244, 0.22), transparent 32rem), radial-gradient(circle at bottom right, rgba(52, 168, 83, 0.18), transparent 28rem), linear-gradient(135deg, #f7faff 0%, #fff8e5 100%)'
+        background: 'radial-gradient(circle at top left, rgba(0, 155, 58, 0.1), transparent 32rem), radial-gradient(circle at bottom right, rgba(254, 223, 0, 0.15), transparent 28rem)'
       }} />
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[19rem_minmax(0,1fr)] gap-6 max-w-7xl mx-auto p-6 min-h-screen">
+      <div className="relative z-10 grid grid-cols-1 xl:grid-cols-[20rem_minmax(0,1fr)] gap-6 max-w-7xl mx-auto p-4 sm:p-6 min-h-screen">
         <Sidebar />
         
-        <main className="border border-white/70 bg-white/80 shadow-[0_24px_70px_rgba(60,64,67,0.18)] backdrop-blur-xl rounded-3xl p-6 md:p-8">
+        <main className="border border-white/70 bg-white/90 shadow-[0_8px_30px_rgba(0,39,118,0.06)] backdrop-blur-xl rounded-3xl p-6 md:p-8">
           {!user ? (
             <Login onLogin={handleLogin} />
           ) : (

@@ -40,44 +40,44 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
       
       <header className="flex flex-col md:flex-row md:items-start justify-between gap-4">
         <div>
-          <p className="text-[#4285f4] text-xs font-black uppercase tracking-widest mb-1">Bem-vindo(a)</p>
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 mb-2">{user.name}</h2>
+          <p className="text-[#009B3A] text-xs font-black uppercase tracking-widest mb-1">Eita, bem-vindo(a)</p>
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-[#002776] mb-2">{user.name}</h2>
           <p className="text-slate-500 leading-relaxed text-sm max-w-md">
-            Palpites e apostas de moedas virtuais podem ser alterados até o fechamento simbólico da rodada.
+            Palpites e tuas apostas de UaiCoins podem ser mudados até a bola rolar, uai.
           </p>
         </div>
-        <button
+          <button
           onClick={onLogout}
-          className="border-0 rounded-full px-5 py-2.5 font-bold transition-transform duration-200 hover:-translate-y-0.5 text-[#4285f4] bg-[#e8f0fe] self-start"
+          className="border-0 rounded-full px-5 py-2.5 font-bold transition-transform duration-200 hover:-translate-y-0.5 text-[#002776] bg-[#FEDF00] shadow-sm self-start"
         >
-          Trocar usuário
+          Trocar de conta, sô
         </button>
       </header>
 
       {/* Indicadores do Participante */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <article className="border border-white/70 bg-white/80 shadow-[0_24px_70px_rgba(60,64,67,0.18)] backdrop-blur-xl rounded-2xl p-5 flex flex-col items-start">
-          <div className="flex items-center gap-2 text-slate-400 mb-1">
+        <article className="border border-[#009B3A]/20 bg-white/80 shadow-[0_4px_20px_rgba(0,155,58,0.08)] backdrop-blur-xl rounded-2xl p-5 flex flex-col items-start">
+          <div className="flex items-center gap-2 text-[#009B3A] mb-1">
             <Trophy size={16} />
             <small className="font-bold text-xs">Pontos Tabela</small>
           </div>
-          <span className="text-3xl font-black tracking-tighter text-slate-900">{stats.points}</span>
+          <span className="text-3xl font-black tracking-tighter text-[#002776]">{stats.points}</span>
         </article>
         
-        <article className="border border-white/70 bg-white/80 shadow-[0_24px_70px_rgba(60,64,67,0.18)] backdrop-blur-xl rounded-2xl p-5 flex flex-col items-start bg-gradient-to-br from-white/80 to-[#fff8e5]/80">
-          <div className="flex items-center gap-2 text-[#fbbc04] mb-1">
+        <article className="border border-[#FEDF00]/30 bg-white/80 shadow-[0_4px_20px_rgba(254,223,0,0.15)] backdrop-blur-xl rounded-2xl p-5 flex flex-col items-start bg-gradient-to-br from-white/80 to-[#FFF9E5]/80">
+          <div className="flex items-center gap-2 text-[#FEDF00] drop-shadow-sm mb-1">
             <Coins size={16} />
-            <small className="font-bold text-xs uppercase tracking-wider text-slate-700">Moedas (VP)</small>
+            <small className="font-bold text-xs uppercase tracking-wider text-[#002776]">UaiCoins no bolso</small>
           </div>
-          <span className="text-3xl font-black tracking-tighter text-slate-900">{Math.floor(stats.virtualMoney)}</span>
+          <span className="text-3xl font-black tracking-tighter text-[#002776]">{Math.floor(stats.virtualMoney)}</span>
         </article>
 
-        <article className="border border-white/70 bg-white/80 shadow-[0_24px_70px_rgba(60,64,67,0.18)] backdrop-blur-xl rounded-2xl p-5 flex flex-col items-start">
-          <div className="flex items-center gap-2 text-slate-400 mb-1">
+        <article className="border border-[#002776]/10 bg-white/80 shadow-[0_4px_20px_rgba(0,39,118,0.08)] backdrop-blur-xl rounded-2xl p-5 flex flex-col items-start">
+          <div className="flex items-center gap-2 text-[#002776] mb-1">
             <Save size={16} />
             <small className="font-bold text-xs">Palpites Ativos</small>
           </div>
-          <span className="text-3xl font-black tracking-tighter text-slate-900">
+          <span className="text-3xl font-black tracking-tighter text-[#002776]">
             {Object.values(predictions).filter(p => p.home !== '' && p.away !== '').length}
           </span>
         </article>
@@ -86,14 +86,14 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(18rem,0.45fr)] gap-6 items-start">
         
         {/* Lista de Jogos */}
-        <section className="border border-white/70 bg-white/80 shadow-[0_24px_70px_rgba(60,64,67,0.18)] backdrop-blur-xl rounded-2xl p-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-dashed border-slate-200 pb-4 mb-4">
+        <section className="border border-[#009B3A]/20 bg-white/80 shadow-[0_4px_20px_rgba(0,155,58,0.08)] backdrop-blur-xl rounded-2xl p-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-dashed border-[#009B3A]/30 pb-4 mb-4">
             <div>
-              <p className="text-[#4285f4] text-xs font-black uppercase tracking-widest">Jogos da Copa</p>
-              <h3 className="text-xl font-bold tracking-tight text-slate-900">Faça seus palpites</h3>
+              <p className="text-[#009B3A] text-xs font-black uppercase tracking-widest">Jogos do trem</p>
+              <h3 className="text-xl font-bold tracking-tight text-[#002776]">Dá teus pitacos</h3>
             </div>
-            <span className="text-[#137333] bg-[#e6f4ea] rounded-full px-3 py-1 text-xs font-extrabold whitespace-nowrap">
-              Rodada Ativa
+            <span className="text-white bg-[#009B3A] rounded-full px-3 py-1 text-xs font-extrabold whitespace-nowrap">
+              Bola Rolando
             </span>
           </div>
 
@@ -136,7 +136,7 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
                           max="15"
                           value={prediction.home}
                           onChange={(e) => handleGoalChange(match.id, 'home', e.target.value)}
-                          className="w-12 h-12 text-center text-xl font-black rounded-lg border border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20 outline-none"
+                          className="w-12 h-12 text-center text-xl font-black rounded-lg border border-slate-300 focus:border-[#009B3A] focus:ring-2 focus:ring-[#009B3A]/20 outline-none"
                         />
                         <span className="text-slate-300 font-bold">×</span>
                         <input
@@ -145,7 +145,7 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
                           max="15"
                           value={prediction.away}
                           onChange={(e) => handleGoalChange(match.id, 'away', e.target.value)}
-                           className="w-12 h-12 text-center text-xl font-black rounded-lg border border-slate-300 focus:border-[#4285f4] focus:ring-2 focus:ring-[#4285f4]/20 outline-none"
+                           className="w-12 h-12 text-center text-xl font-black rounded-lg border border-slate-300 focus:border-[#009B3A] focus:ring-2 focus:ring-[#009B3A]/20 outline-none"
                         />
                       </div>
                       <div className="mt-2 text-[10px] uppercase font-bold text-slate-400">Empate Odd: {match.odds.draw}x</div>
@@ -161,24 +161,23 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
                   {/* Aposta de Moedas Virtuais */}
                   <div className="mt-5 pt-4 border-t border-dashed border-slate-200">
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                      <label className="flex items-center gap-3 text-sm font-bold text-slate-600">
-                        <Coins size={18} className="text-[#fbbc04]" />
-                        Investimento:
+                      <label className="flex items-center gap-3 text-sm font-bold text-[#002776]">
+                        <Coins size={18} className="text-[#009B3A]" />
+                        Apostar UaiCoins:
                         <input 
                           type="number" 
                           min="0"
                           step="10"
                           value={prediction.stake || ''}
-                          className="w-20 px-2 py-1 text-right text-sm font-black rounded border border-slate-300 focus:border-[#fbbc04] outline-none"
+                          className="w-20 px-2 py-1 text-right text-sm font-black rounded border border-slate-300 focus:border-[#009B3A] outline-none"
                           placeholder="0"
                           onChange={(e) => handleStakeChange(match.id, e.target.value)}
                         />
-                        VP
                       </label>
 
                       {hasPrediction && selectedOdd && (
                         <div className="text-xs font-bold text-slate-500">
-                          Retorno p/ resultado: <strong className="text-[#34a853] ml-1">{potentialWin.toFixed(1)} VP</strong>
+                          Se der bão, cê ganha: <strong className="text-[#009B3A] ml-1">{potentialWin.toFixed(1)} UaiCoins</strong>
                         </div>
                       )}
                     </div>
@@ -187,16 +186,16 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
                   {match.result && (
                      <footer className="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-sm">
                        <span className="font-semibold text-slate-600">
-                         Resultado: {match.result.home} × {match.result.away}
+                         Fim de papo: {match.result.home} × {match.result.away}
                        </span>
                        <div className="flex flex-col items-end">
-                          <strong className="text-[#34a853] bg-[#e6f4ea] px-2 py-1 rounded">
-                            {score.points} pts tabela
+                          <strong className="text-white bg-[#009B3A] px-2 py-1 rounded">
+                            {score.points} pts pro cê
                             {score.exact ? ` • ×${score.goalMultiplier}` : ''}
                           </strong>
                           {prediction.stake > 0 && (
-                            <strong className="text-[#fbbc04] font-black text-xs mt-1">
-                              {score.correctOutcome ? `+${potentialWin.toFixed(1)} VP Ganho!` : `-${prediction.stake} VP Perdido`}
+                            <strong className="text-[#002776] font-black text-xs mt-1">
+                              {score.correctOutcome ? `+${potentialWin.toFixed(1)} pro bolso!` : `-${prediction.stake} UaiCoins (Nuuu!)`}
                             </strong>
                           )}
                        </div>
@@ -209,11 +208,11 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
         </section>
 
         {/* Painel de Classificação */}
-        <section className="border border-white/70 bg-white/80 shadow-[0_24px_70px_rgba(60,64,67,0.18)] backdrop-blur-xl rounded-2xl p-6 sticky top-6">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-3">
+        <section className="border border-[#002776]/10 bg-white/80 shadow-[0_4px_20px_rgba(0,39,118,0.08)] backdrop-blur-xl rounded-2xl p-6 sticky top-6">
+          <div className="flex items-center justify-between border-b border-[#002776]/10 pb-3 mb-3">
              <div>
-               <p className="text-[#4285f4] text-xs font-black uppercase tracking-widest cursor-default">Ranking Global</p>
-               <h3 className="text-xl font-bold tracking-tight text-slate-900">Classificação gdg BH</h3>
+               <p className="text-[#009B3A] text-xs font-black uppercase tracking-widest cursor-default">Os bão de serviço</p>
+               <h3 className="text-xl font-bold tracking-tight text-[#002776]">Ranking do Trem</h3>
              </div>
           </div>
           
@@ -225,27 +224,27 @@ export function Dashboard({ user, matches, predictions, leaderboard, onUpdatePre
                   key={player.id} 
                   className={`flex items-center gap-3 rounded-2xl p-3 ${
                     isCurrent 
-                      ? 'bg-gradient-to-br from-[#34a853] to-[#4285f4] text-white shadow-md' 
-                      : 'bg-slate-50 text-slate-800 border border-slate-100'
+                      ? 'bg-gradient-to-br from-[#009B3A] to-[#00702A] text-white shadow-md' 
+                      : 'bg-white text-[#002776] border border-[#002776]/10'
                   }`}
                 >
-                  <span className={`grid place-items-center w-8 h-8 rounded-full font-black text-sm shrink-0 ${isCurrent ? 'bg-white text-[#4285f4]' : 'bg-white border-2 border-slate-200 text-slate-400'}`}>
+                  <span className={`grid place-items-center w-8 h-8 rounded-full font-black text-sm shrink-0 ${isCurrent ? 'bg-white text-[#009B3A]' : 'bg-[#FEDF00] text-[#002776]'}`}>
                     {index + 1}
                   </span>
                   
                   <div className="flex flex-col flex-1 min-w-0">
                     <strong className="truncate font-bold text-sm">
-                      {player.name}
+                      {player.name} {isCurrent && "(Ocê)"}
                     </strong>
-                    <div className={`text-xs flex gap-2 font-semibold ${isCurrent ? 'text-white/80' : 'text-slate-500'}`}>
+                    <div className={`text-xs flex gap-2 font-semibold ${isCurrent ? 'text-white/80' : 'text-[#002776]/60'}`}>
                       <span>{player.exactScores} cravados</span>
                     </div>
                   </div>
                   
                   <div className="flex flex-col items-end shrink-0 text-right">
                     <b className="text-sm">{player.points} pts</b>
-                    <span className={`text-[10px] font-black uppercase tracking-wider ${isCurrent ? 'text-[#fbbc04]' : 'text-[#fbbc04]'}`}>
-                      {Math.floor(player.virtualMoney)} VP
+                    <span className={`text-[10px] font-black uppercase tracking-wider ${isCurrent ? 'text-[#FEDF00]' : 'text-[#009B3A]'}`}>
+                      {Math.floor(player.virtualMoney)} UaiCoins
                     </span>
                   </div>
                 </li>

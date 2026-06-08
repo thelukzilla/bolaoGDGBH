@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Soccer ball base -->
+  <circle cx="50" cy="50" r="45" fill="#F0F8F1" stroke="#009B3A" stroke-width="4"/>
+  <!-- Pentagons/Lines to resemble a soccer ball mixed with GDG brackets -->
+  <path d="M50 25 L65 35 L59 55 L41 55 L35 35 Z" fill="#FEDF00" stroke="#002776" stroke-width="2"/>
+  
+  <path d="M50 25 L50 5" fill="none" stroke="#002776" stroke-width="4"/>
+  <path d="M65 35 L85 30" fill="none" stroke="#002776" stroke-width="4"/>
+  <path d="M59 55 L70 70" fill="none" stroke="#002776" stroke-width="4"/>
+  <path d="M41 55 L30 70" fill="none" stroke="#002776" stroke-width="4"/>
+  <path d="M35 35 L15 30" fill="none" stroke="#002776" stroke-width="4"/>
+
+  <!-- Brackets mimicking GDG logo using the other colors -->
+  <path d="M20 75 L30 85 L20 95" fill="none" stroke="#009B3A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 75 L70 85 L80 95" fill="none" stroke="#002776" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
