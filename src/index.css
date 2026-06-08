@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Google Sans", Arial, ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Remove as setas dos campos numéricos para um visual mais limpo em navegadores padrão */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Fallback do Firefox para campos numéricos */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Classes utilitárias base traduzidas do CSS legado original */
+.pattern-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(66, 133, 244, 0.1) 1px, transparent 0);
+  background-size: 16px 16px;
+}
