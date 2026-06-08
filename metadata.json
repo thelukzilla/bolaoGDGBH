@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Bolão da Copa gdg BH",
+  "description": "Aplicativo de bolão da Copa com palpites, rank global e investimento de moedas virtuais.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
